@@ -1,0 +1,5 @@
+*.meta
+Assets/Logs
+Library/metadata
+Library
+Temp
