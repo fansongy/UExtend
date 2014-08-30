@@ -12,7 +12,7 @@
 using UnityEngine;
 using System.Collections;
 
-public abstract class OperateController : MonoBehaviour {
+public abstract class OperateController  {
 	
 	protected OperateType ctrlType {
 		get;

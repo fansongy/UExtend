@@ -12,9 +12,14 @@ using System.Collections;
 
 public class NotifyActor : OperateController {
 
+	public NotifyActor()
+	{
+		initData ();
+	}
+
 	public override void initData ()
 	{
-		ctrlType = OperateType.BrocastActor;
+		ctrlType = OperateType.NotifyActor;
 	}
 	
 	public override void cleanData ()

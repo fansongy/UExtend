@@ -12,6 +12,11 @@ using System.Collections;
 
 public class BroadcastAcotr : OperateController {
 
+	public BroadcastAcotr()
+	{
+		initData ();
+	}
+
 	public override void initData ()
 	{
 		ctrlType = OperateType.BrocastActor;
