@@ -13,16 +13,6 @@ using UnityEngine;
 using System.Collections;
 
 public abstract class OperateController  {
-	
-	protected OperateType ctrlType {
-		get;
-		set;
-	}
-
-	public bool isType(OperateType type)
-	{
-		return type == ctrlType;
-	}
 
 	public ConveyEffect conveyEffect = null;
 

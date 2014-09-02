@@ -17,7 +17,7 @@ public class TestController :MonoBehaviour {
 	{
 		if(GUI.Button(new Rect(100,100,100,50),"boradcast msg"))
 		{
-			if(m_curController == null || !m_curController.isType(OperateType.BrocastActor))
+			if(m_curController == null || !(m_curController is BroadcastAcotr))
 			{
 				m_curController = new BroadcastAcotr();
 			}
@@ -25,7 +25,7 @@ public class TestController :MonoBehaviour {
 		}
 		if(GUI.Button(new Rect(100,300,100,50),"notify msg"))
 		{
-			if(m_curController == null || !m_curController.isType(OperateType.NotifyActor))
+			if(m_curController == null || !(m_curController is NotifyActor))
 			{
 				m_curController = new NotifyActor();
 			}

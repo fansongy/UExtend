@@ -19,7 +19,7 @@ public class BroadcastAcotr : OperateController {
 
 	public override void initData ()
 	{
-		ctrlType = OperateType.BrocastActor;
+
 	}
 
 	public override void cleanData ()

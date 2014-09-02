@@ -19,7 +19,7 @@ public class NotifyActor : OperateController {
 
 	public override void initData ()
 	{
-		ctrlType = OperateType.NotifyActor;
+
 	}
 	
 	public override void cleanData ()
