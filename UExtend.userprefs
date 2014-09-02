@@ -1,0 +1,17 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Example/CallSelf/JustCall.cs">
+    <Files>
+      <File FileName="../../Code/TestTools/Assets/CallSelfMethod.cs" Line="27" Column="23" />
+      <File FileName="Assets/UExtend/AssertLoader/Asset.cs" Line="1" Column="1" />
+      <File FileName="Assets/UExtend/AssertLoader/AssetCache.cs" Line="1" Column="1" />
+      <File FileName="../../Code/TestTools/Assets/Editor/CallSelfMethodEditor.cs" Line="29" Column="4" />
+      <File FileName="Assets/Example/CallSelf/JustCall.cs" Line="4" Column="1" />
+      <File FileName="Assets/Editor/CallSelfMethodEditor.cs" Line="21" Column="3" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
