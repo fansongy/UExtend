@@ -14,12 +14,24 @@ public class Asset
 {
 	private class AssetFamilyPathInfo
 	{
-		public string format;
-		public string sourceDir;
-		public string[] exts;
+		public string bundleDir;  	// dir of bundle
+		public string sourceDir; //dir in program
+		public string resourceDir; 	//dir in resource 
+		public string[] exts;   
 	}
+
+	public enum LoadModel 
+	{
+		FromResources,
+		FromBundle
+	}
+
+	LoadModel _loadModel = LoadModel.FromBundle;
+
+	public LoadModel loadModel() {return _loadModel;}
+
 	private static readonly Dictionary<AssetFamily, Asset.AssetFamilyPathInfo> paths;
-	private string m_path;
+	private Dictionary<LoadModel,string> m_path = new Dictionary<LoadModel, string>();
 	public string Name
 	{
 		get;
@@ -45,7 +57,8 @@ public class Asset
 		get;
 		private set;
 	}
-	public string BundleDir
+
+	public string SourceDir
 	{
 		get
 		{
@@ -73,8 +86,9 @@ public class Asset
 		Dictionary<AssetFamily, Asset.AssetFamilyPathInfo> dictionary = new Dictionary<AssetFamily, Asset.AssetFamilyPathInfo>();
 		dictionary.Add(AssetFamily.Config, new Asset.AssetFamilyPathInfo
 		{
-			format = "Configs/{0}.config",
-			sourceDir = FileUtils.PersistentDataPath,
+			bundleDir = FileUtils.PersistentDataPath + "Configs/{0}.unity3d",
+			sourceDir = "Configs",
+			resourceDir = "Configs/{0}",
 			exts = new string[]
 			{
 				"config"
@@ -82,8 +96,9 @@ public class Asset
 		});
 		dictionary.Add(AssetFamily.Sound, new Asset.AssetFamilyPathInfo
 		{
-			format = "Sounds/{0}.unity3d",
-			sourceDir = "Assets/Game/Sounds",
+			bundleDir = FileUtils.PersistentDataPath + "Sounds/{0}.unity3d",
+			sourceDir = "Sounds",
+			resourceDir = "Sounds/{0}",
 			exts = new string[]
 			{
 				"prefab"
@@ -91,8 +106,9 @@ public class Asset
 		});
 		dictionary.Add(AssetFamily.Texture, new Asset.AssetFamilyPathInfo
 		{
-			format = "Textures/{0}.unity3d",
-			sourceDir = "Assets/Game/Textures",
+			bundleDir = FileUtils.PersistentDataPath + "Textures/{0}.unity3d",
+			sourceDir = "Textures",
+			resourceDir = "Textures/{0}",
 			exts = new string[]
 			{
 				"psd"
@@ -100,8 +116,9 @@ public class Asset
 		});
 		dictionary.Add(AssetFamily.Screen, new Asset.AssetFamilyPathInfo
 		{
-			format = "UIScreens/{0}.unity3d",
-			sourceDir = "Assets/Game/UIScreens",
+			bundleDir = FileUtils.PersistentDataPath + "UIScreens/{0}.unity3d",
+			sourceDir = "UIScreens",
+			resourceDir = "UIScreens/{0}",
 			exts = new string[]
 			{
 				"prefab"
@@ -109,8 +126,9 @@ public class Asset
 		});
 		dictionary.Add(AssetFamily.GameObject, new Asset.AssetFamilyPathInfo
 		{
-			format = "{0}.unity3d",
-			sourceDir = FileUtils.PersistentDataPath,
+			bundleDir = FileUtils.PersistentDataPath + "{0}.unity3d",
+			sourceDir = "GamePrefab",
+			resourceDir = "GamePrefab/{0}",
 			exts = new string[]
 			{
 				"prefab"
@@ -122,13 +140,22 @@ public class Asset
 	{
 		return new Asset(assetName, family, persistent, loadAsync, preloadOnly)
 		{
-			m_path = Asset.paths[family].sourceDir+string.Format(Asset.paths[family].format, assetName)
+			m_path = new Dictionary<LoadModel, string>()
+			{
+				{LoadModel.FromBundle,string.Format(Asset.paths[family].bundleDir, family.ToString())},
+				{LoadModel.FromResources,string.Format(Asset.paths[family].resourceDir, assetName)}
+			}
 		};
 	}
 
 	public string GetPath()
 	{
-		return this.m_path;
+		return this.m_path[_loadModel];
+	}
+
+	public string GetBundlePath()
+	{
+		return this.m_path[LoadModel.FromBundle];
 	}
 
 //	public void Save(byte[] bytes, string url, string cachePath)

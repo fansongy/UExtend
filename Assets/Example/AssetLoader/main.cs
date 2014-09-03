@@ -22,17 +22,18 @@ public class main : MonoBehaviour {
 		}
 		if (GUI.Button (new Rect (350, 100, 200, 80), "Load GameObject")) 
 		{
-			AssetLoader.Get().LoadGameObject("sp1",new AssetLoader.GameObjectCallback(this.onLoaded));
+			AssetLoader.Get().LoadGameObject("sp1",this.onLoaded);
 		}
 		if(GUI.Button(new Rect (350, 300, 200, 80),"Load File"))
 		{
-			AssetLoader.Get().LoadConfig("log",new AssetLoader.ObjectCallback(this.onConfig));
+			AssetLoader.Get().LoadConfig("log",this.onConfig);
 		}
 			
 	}
-	void onLoaded(string name, GameObject go, object callbackData)
+	void onLoaded(string name, Object go, object callbackData)
 	{
-			Log.fansy.ScreenPrint ("load call back!");
+		Log.fansy.ScreenPrint ("load call back!");
+		Instantiate(go);
 	}
 
 	void onConfig(string name, System.Object obj, object callbackData)

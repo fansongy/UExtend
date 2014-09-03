@@ -44,7 +44,7 @@ public class Log
 	public static Logger fansy = new Logger("fansy");
 	private readonly LogInfo[] DEFAULT_LOG_INFOS = new LogInfo[]
 	{
-		new LogInfo("Asset", false,false,true,LogLevel.Debug)
+		new LogInfo("Asset", true,false,true,LogLevel.Debug)
 //		new LogInfo("fansy", true,true,false,LogLevel.Debug)
 	};
 	private static Log s_instance;

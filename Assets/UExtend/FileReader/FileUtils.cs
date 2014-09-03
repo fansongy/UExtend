@@ -32,20 +32,43 @@ public class FileUtils
 		}
 	}
 	//-----------------------------------------------------------------
-	public static string MakeSourceAssetPath(DirectoryInfo folder)
+	public static string GetPathUnderAssets(DirectoryInfo folder)
 	{
-		return FileUtils.MakeSourceAssetPath(folder.FullName);
+		return FileUtils.GetPathUnderAssets(folder.FullName);
 	}
-	public static string MakeSourceAssetPath(FileInfo fileInfo)
+	public static string GetPathUnderAssets(FileInfo fileInfo)
 	{
-		return FileUtils.MakeSourceAssetPath(fileInfo.FullName);
+		return FileUtils.GetPathUnderAssets(fileInfo.FullName);
 	}
-	public static string MakeSourceAssetPath(string path)
+	public static string GetPathUnderAssets(string path)
 	{
 		string text = path.Replace("\\", "/");
 		int num = text.IndexOf("/Assets", 5);
-		return text.Remove(0, num + 1);
+		return text.Remove(0, num + 7);
 	}
+	
+	public static string GetFullPathOfAssets(string addPath)
+	{
+		return Application.dataPath+"/"+addPath;
+	}
+
+	public static string GetFullBundleTempPath(string underPath)
+	{
+		return GetFullPathOfAssets("Resources/Temp/"+underPath);
+	}
+
+	public static string GetFullResourcesPath(string underPath)
+	{
+		return GetFullPathOfAssets("Resources/"+underPath);
+	}
+
+	public static string GetPathUnderResources(string path)
+	{
+		string text = path.Replace("\\", "/");
+		int num = text.IndexOf("/Resources", 5);
+		return text.Remove(0, num + 11);
+	}
+
 	//----------------------------------------------------------------
 	public static string MakeMetaPathFromSourcePath(string path)
 	{
@@ -53,7 +76,7 @@ public class FileUtils
 	}
 	public static string MakeSourceAssetMetaPath(string path)
 	{
-		string path2 = FileUtils.MakeSourceAssetPath(path);
+		string path2 = FileUtils.GetPathUnderAssets(path);
 		return FileUtils.MakeMetaPathFromSourcePath(path2);
 	}
 	//----------------------------------------------------------------
