@@ -15,7 +15,7 @@ public class StructureGame : MonoBehaviour {
 		GameObject view = new GameObject("view");
 		view.AddComponent<TestView> ();
 
-		TestController tc = Singleton.getInstance (ClassName.GAME_CONTROLLER) as TestController;
+		Singleton.getInstance (ClassName.GAME_CONTROLLER);
 	}
 
 }

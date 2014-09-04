@@ -3,16 +3,16 @@ using System.Collections;
 
 public class testSp : MonoBehaviour {
 	[SerializeField]
-	private string name;
+	private string testName;
 	[SerializeField]
 	private Rect rect;
 	
 	void Awake () 
 	{
-		Debug.Log("my name is "+ name);
+		Debug.Log("my name is "+ testName);
 	}
 	void OnGUI()
 	{
-		GUI.Label (rect, name);
+		GUI.Label (rect, testName);
 	}
 }

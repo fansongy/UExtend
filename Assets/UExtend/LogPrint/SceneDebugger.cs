@@ -78,7 +78,7 @@ public class SceneDebugger : MonoBehaviour
 	}
 	private void LayoutQualityControls(ref Vector2 offset, Vector2 size)
 	{
-		float num = size.x / 3f;
+//		float num = size.x / 3f;
 //		if (GUI.Button(new Rect(offset.x, offset.y, num, size.y), "Low"))
 //		{
 //			GraphicsManager.Get().RenderQualityLevel = GraphicsQuality.Low;
