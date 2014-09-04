@@ -1,15 +1,16 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Editor/BundleMaker.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/UExtend/AssertLoader/AssertLoader.cs">
     <Files>
       <File FileName="Assets/Example/AssetLoader/testSp.cs" Line="1" Column="1" />
-      <File FileName="Assets/Editor/BundleMaker.cs" Line="103" Column="2" />
+      <File FileName="Assets/Editor/BundleMaker.cs" Line="131" Column="20" />
       <File FileName="Assets/UExtend/FileReader/FileUtils.cs" Line="1" Column="1" />
       <File FileName="Assets/UExtend/CallSeflMethod/CallSelfMethod.cs" Line="1" Column="1" />
       <File FileName="Assets/UExtend/LogPrint/Log.cs" Line="1" Column="1" />
-      <File FileName="Assets/UExtend/AssertLoader/AssertLoader.cs" Line="402" Column="9" />
+      <File FileName="Assets/UExtend/AssertLoader/AssertLoader.cs" Line="9" Column="2" />
       <File FileName="Assets/UExtend/AssertLoader/Asset.cs" Line="29" Column="48" />
       <File FileName="Assets/Example/AssetLoader/main.cs" Line="10" Column="30" />
+      <File FileName="Assets/UExtend/AssertLoader/AssertFamily.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

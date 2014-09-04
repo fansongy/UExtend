@@ -3,27 +3,29 @@
  * 
  * v0.1 by fansy
  * Feature:
- * 		1.load the prefab from StreamAssets directory. The AssetBundle should be splite packaged.
- *      2.load the config file in StreamAssets.The file must be unpackaged. 
- *        Because It should be use the second Level Read. It maybe implement in next version.
- * 	
+ * 		1. load the Asset by Asset's setting.
+ *      2. Every Type of Asset will package in same bundle,and named by its type.
+ * 		3. Editor support can copy the Asset to Resources or make AssetBundle.
+ *      4. Change LoadModel _loadModel in Asset.cs will change the load way.
+ * 
  * Usage:
- * 		1.You can use LoadGameObject() to load the resource from the AssetBundle:
- *        	 AssetLoader.Get().LoadGameObject("sp1",new AssetLoader.GameObjectCallback(this.onLloaded));
+ * 		1.You can use LoadGameObject() to load the GameObject from the AssetBundle:
+ *        	 AssetLoader.Get().LoadGameObject("sp1",this.onLloaded);
  *      2.Then to implement the callback:
- * 			void onLloaded(string name, GameObject go, object callbackData)
+ * 			void onLoaded(string name, Object go, object callbackData)
  *			{
  *				Log.fansy.ScreenPrint ("load call back!");
+ *				Instantiate(go);
  *			}
- *      3.You can use LoadConfig to load config File
+ *      3.You can use LoadConfig to load Object File
  * 			AssetLoader.Get().LoadConfig("log",new AssetLoader.ObjectCallback(this.onConfig));
  * 		4. Then to implement the callback:
- * 			void onConfig(string name, System.Object obj, object callbackData)
+ * 			void onConfig(string name, Object obj, object callbackData)
  *			{
  *				Log.fansy.ScreenPrint ("config call back!");
- *				WWW bundle = obj as WWW;
- *				Log.fansy.ScreenPrint (bundle.text);
+ *				Log.fansy.ScreenPrint (obj.ToString());
  *			}
+ *
  * Tip:
  * When it load error by "<url> malformed",it cause by wrong plafrom
  * 

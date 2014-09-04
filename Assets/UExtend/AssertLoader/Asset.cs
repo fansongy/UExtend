@@ -82,7 +82,6 @@ public class Asset
 	}
 	static Asset()
 	{
-		// Note: this type is marked as 'beforefieldinit'.
 		Dictionary<AssetFamily, Asset.AssetFamilyPathInfo> dictionary = new Dictionary<AssetFamily, Asset.AssetFamilyPathInfo>();
 		dictionary.Add(AssetFamily.Config, new Asset.AssetFamilyPathInfo
 		{
