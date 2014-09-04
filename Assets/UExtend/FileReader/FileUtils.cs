@@ -44,7 +44,7 @@ public class FileUtils
 	{
 		string text = path.Replace("\\", "/");
 		int num = text.IndexOf("/Assets", 5);
-		return text.Remove(0, num + 7);
+		return text.Remove(0, num + 8);
 	}
 	
 	public static string GetFullPathOfAssets(string addPath)

@@ -36,7 +36,7 @@ using System.Text;
 using UnityEngine;
 public class Log
 {
-	private const string CONFIG_FILE_NAME = "log.config";
+	private const string CONFIG_FILE_NAME = "log.txt";
 	private const string OUTPUT_DIRECTORY_NAME = "Logs";
 	private const string OUTPUT_FILE_EXTENSION = "log";
 

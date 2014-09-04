@@ -26,7 +26,7 @@ public class Asset
 		FromBundle
 	}
 
-	LoadModel _loadModel = LoadModel.FromBundle;
+	LoadModel _loadModel = LoadModel.FromResources;
 
 	public LoadModel loadModel() {return _loadModel;}
 
@@ -86,7 +86,7 @@ public class Asset
 		Dictionary<AssetFamily, Asset.AssetFamilyPathInfo> dictionary = new Dictionary<AssetFamily, Asset.AssetFamilyPathInfo>();
 		dictionary.Add(AssetFamily.Config, new Asset.AssetFamilyPathInfo
 		{
-			bundleDir = FileUtils.PersistentDataPath + "Configs/{0}.unity3d",
+			bundleDir = FileUtils.PersistentDataPath + "{0}.unity3d",
 			sourceDir = "Configs",
 			resourceDir = "Configs/{0}",
 			exts = new string[]
