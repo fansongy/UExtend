@@ -1,4 +1,9 @@
-﻿using UnityEngine;
+﻿/*
+ * Control the gameObejct rotation by curve
+ * 
+ */ 
+
+using UnityEngine;
 using System.Collections;
 
 public class CurveRotation : CurveTween<Vector3> {

@@ -1,4 +1,11 @@
-﻿using UnityEngine;
+﻿/*
+ * Curve Tween is designed to controlling progress of animation
+ * 
+ * it will return the progress value with the time pass,and call the callBack when it end.
+ * 
+ */ 
+
+using UnityEngine;
 using System.Collections;
 
 
