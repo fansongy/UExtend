@@ -51,4 +51,7 @@ It alse include the file operation,such as: copy to Resouces, make AssetBundle.
 
     void onConfig(string name, Object obj, object callbackData)	{		Log.fansy.ScreenPrint ("config call back!");		Log.fansy.ScreenPrint (obj.ToString());	}
 
+## Useful Component #####1.CallSelfMethod ###
+It can call the public function of other componet in same gameObject.It can detect the function in editor,and set the delay time of calling after start().### 2.CurveRotation ###It is an rotating animation component which is controled by curve.
+
 	
