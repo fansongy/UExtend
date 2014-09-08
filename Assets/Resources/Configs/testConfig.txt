@@ -1,0 +1,20 @@
+{
+	"testBool":"true",
+	"testString":"I'm string",
+	"testLong":3,
+	"testdouble":3.1415,
+	"testStringInGroup":
+	[
+		"str1",
+		"str2",
+		"str3"
+	],
+	"testLongInGroup":
+	[
+		5,
+		10,
+		15,
+		20
+	]
+
+}

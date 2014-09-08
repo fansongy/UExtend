@@ -1,0 +1,19 @@
+{
+	"testBool":"true",
+	"testString":"I'm string",
+	"testInt":3,
+	"testStringInGroup":
+	[
+		"str1",
+		"str2",
+		"str3"
+	],
+	"testIntInGroup":
+	[
+		5,
+		10,
+		15,
+		20
+	]
+
+}
