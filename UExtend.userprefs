@@ -1,8 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="../2PMahjong/Assets/Script/Controller/CameraController.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Example/Localize/testLocalize.cs">
     <Files>
-      <File FileName="../2PMahjong/Assets/Script/Controller/CameraController.cs" Line="1" Column="1" />
+      <File FileName="Assets/Example/Localize/testLocalize.cs" Line="14" Column="3" />
+      <File FileName="Assets/UExtend/AssertLoader/AssertFamily.cs" Line="1" Column="1" />
+      <File FileName="Assets/UExtend/AssertLoader/Asset.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
