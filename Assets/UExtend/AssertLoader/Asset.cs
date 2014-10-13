@@ -26,6 +26,7 @@ public class Asset
 		FromBundle
 	}
 
+	//change this value to change load strategy
 	LoadModel _loadModel = LoadModel.FromResources;
 
 	public LoadModel loadModel() {return _loadModel;}
