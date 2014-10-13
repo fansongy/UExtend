@@ -1,0 +1,14 @@
+{
+	 "TID_TEST_LANGUAGE_TITLE": {
+        "EN": "Title",
+        "FR": "Titre",
+        "CN": "标题",
+        "RU": "заголовок"
+    },
+    "TID_TEST_LANGUAGE_DES": {
+        "EN": "This is a description",
+        "FR": "C'est une description",
+        "CN": "这是一个描述",
+        "RU": "это  описание"
+    }
+}

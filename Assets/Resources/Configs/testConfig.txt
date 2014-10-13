@@ -1,15 +1,14 @@
 {
 	"testBool":"true",
 	"testString":"I'm string",
-	"testLong":3,
-	"testdouble":3.1415,
+	"testInt":3,
 	"testStringInGroup":
 	[
 		"str1",
 		"str2",
 		"str3"
 	],
-	"testLongInGroup":
+	"testIntInGroup":
 	[
 		5,
 		10,
