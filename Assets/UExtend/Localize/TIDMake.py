@@ -11,6 +11,7 @@ TIDMake script help to make localize program.
 """
 
 path = "../../Configs/Localize.txt"
+# path = "test.json"
 langs = {"CN","EN","RU"}
 defaultLang = "CN"
 
@@ -37,9 +38,8 @@ def addTID(tid):
 			for types in langs:
 				newData[types] = "???"
 			jsonData[tid] = newData
-			# jsonData = sorted(jsonData.items(),key=lambda d:d[0])
 			with codecs.open(path,'w','utf-8') as w:
-				output = json.dump(jsonData,w,ensure_ascii = False,indent = 4)
+				output = json.dump(jsonData,w,ensure_ascii = False,indent = 4,sort_keys=True)
 			print "add tid success"
 	except IOError as err:
 		print "Fail to open File at "+path+" Error is: "+str(err)
@@ -65,7 +65,7 @@ def exportLang(lang):
 				if(value.has_key(lang)):
 					outData[key] = value[lang]
 			with codecs.open("export_"+lang,'w','utf-8') as w:
-				json.dump(outData,w,ensure_ascii=False,indent = 4)
+				json.dump(outData,w,ensure_ascii=False,indent = 4,sort_keys = True)
 			print "export success"
 	except IOError as err:
 		print "Fail to open File at "+path+" Error is: "+str(err)
@@ -82,10 +82,10 @@ def changeDesc(tid,lang,value):
 				print "No language: "+lang+" in tid: "+tid
 				sys.exit(2)
 			data[lang] = value.decode("utf-8")
-			print tid+"\n"+json.dumps(jsonData[tid],ensure_ascii = False,indent = 4)
+			print tid+"\n"+json.dumps(jsonData[tid],ensure_ascii = False,indent = 4,sort_keys=True)
 
 			with codecs.open(path,'w','utf-8') as w:
-				output = json.dump(jsonData,w,ensure_ascii = False,indent = 4)
+				output = json.dump(jsonData,w,ensure_ascii = False,indent = 4,sort_keys=True)
 			print "operation success"
 	except IOError as err:
 		print "Fail to open File at "+path+" Error is: "+str(err)
