@@ -12,6 +12,7 @@ TIDMake script help to make localize program.
 
 path = "../../Configs/Localize.txt"
 # path = "test.json"
+exportPath = "."
 langs = {"CN","EN","RU"}
 defaultLang = "CN"
 
@@ -23,7 +24,7 @@ def Usage():
 	print "\t-l [language] : target Language"
 	
 	print "\t-d [describe]: add a describe for the TID,default is chinese.\n\t\t\tWarning: It should after '-a' or '-c' "
-	print "\t-e : export language for translate"
+	print "\t-e [language]: export language for translate"
 
 def addTID(tid):
 	try:
@@ -60,13 +61,15 @@ def exportLang(lang):
 	try:
 		with open(path,'r') as f:
 			jsonData = json.load(f)
-			outData ={}
+			outData =[]
 			for key,value in jsonData.items():
 				if(value.has_key(lang)):
-					outData[key] = value[lang]
-			with codecs.open("export_"+lang,'w','utf-8') as w:
-				json.dump(outData,w,ensure_ascii=False,indent = 4,sort_keys = True)
-			print "export success"
+					outData.append(value[lang])
+			output="OutPut "+lang+":\n\n"
+			output+="\n".join(outData)
+			with codecs.open(exportPath+"export_"+lang,'w','utf-8') as w:
+				w.write(output)
+			print "export "+lang+" success. file path is: "+exportPath+"export_"+lang
 	except IOError as err:
 		print "Fail to open File at "+path+" Error is: "+str(err)
 
@@ -92,7 +95,7 @@ def changeDesc(tid,lang,value):
 
 def main(argv):
 	try:
-	    opts,args = getopt.getopt(sys.argv[1:],"ed:a:c:l:")
+	    opts,args = getopt.getopt(sys.argv[1:],"e:d:a:c:l:")
 	except getopt.GetoptError, err:
 	    print str(err)
 	    Usage()
@@ -136,6 +139,8 @@ def main(argv):
 				else:
 					changeDesc(targetTID,targetLang,value)
 		if op == "-e":
+			if(len(value)>0):
+				targetLang = value
 			exportLang(targetLang)
 if __name__ == '__main__':
 	main(sys.argv)
