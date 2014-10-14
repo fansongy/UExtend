@@ -71,4 +71,14 @@ public class Localize : MonoBehaviour {
 			return "???";
 		}
 	}
+
+	public string getStringByTID(string tid,object arg0)
+	{
+		string str = getStringByTID(tid);
+		if(str != "???")
+		{
+			str = string.Format(str,arg0); 
+		}
+		return str;
+	}
 }

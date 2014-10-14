@@ -5,6 +5,7 @@ public class testLocalize : MonoBehaviour {
 
 	string title = "???";
 	string desc = "???";
+	string argDesc = "???";
 	string[] langs = { "CN","EN","FR","RU","Error" };
 	int curSelected = 0;
 
@@ -20,8 +21,10 @@ public class testLocalize : MonoBehaviour {
 		Localize.Get().setCurLang(langs[curSelected]);
 		title = Localize.Get().getStringByTID("TID_TEST_LANGUAGE_TITLE");
 		desc = Localize.Get().getStringByTID("TID_TEST_LANGUAGE_DES");
+		argDesc = Localize.Get().getStringByTID("TID_TEST_LANGUAGE_ARGS",10086);
 		GUILayout.Label(title);
 		GUILayout.Label(desc);
+		GUILayout.Label(argDesc);
 	}
 
 }
