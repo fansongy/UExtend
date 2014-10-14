@@ -1,4 +1,18 @@
-﻿using UnityEngine;
+﻿/*
+ * This class is used to control localize text
+ * 
+ * Usage:
+ * 		1.set current language
+ * 			Localize.Get().setCurLang(langs[curSelected]);
+ * 		2.call func to get the text
+ * 			Localize.Get().getStringByTID("TID_TEST_LANGUAGE_TITLE");
+ * Script:	
+ * 	In order to add TID easily, I wrote a python script to manage TID.
+ *  It's named TIDMake which is in the same level with this file.
+ *  It can add,change TID, and also can export one kind of language for translating.
+ * 
+ */ 
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 

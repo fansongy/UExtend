@@ -51,6 +51,22 @@ It alse include the file operation,such as: copy to Resouces, make AssetBundle.
 
     void onConfig(string name, Object obj, object callbackData)	{		Log.fansy.ScreenPrint ("config call back!");		Log.fansy.ScreenPrint (obj.ToString());	}
 
+## 4.Localize ##
+This model is designed to make muti-language program.We can easily get the text of traget language by follow this step:
+
+1.set current language
+
+	Localize.Get().setCurLang(langs[curSelected]);
+2.call func to get the text
+
+	Localize.Get().getStringByTID("TID_TEST_LANGUAGE_TITLE");
+		
+The text is saved in config file.
+
+In order to add TID easily, I wrote a python script to manage TID. It's named TIDMake which is in the same level with this file.It can add,change TID, and also can export one kind of language for translating. we can add a new TID by calling:
+
+	python TIDMake.py -a TID_NEW -d "I'm descirbe"
+
 ## Useful Component #####1.CallSelfMethod ###
 It can call the public function of other componet in same gameObject.It can detect the function in editor,and set the delay time of calling after start().### 2.CurveRotation ###It is an rotating animation component which is controled by curve.
 
