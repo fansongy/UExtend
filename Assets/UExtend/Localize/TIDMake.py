@@ -10,7 +10,7 @@ TIDMake script help to make localize program.
 
 """
 
-path = "test.json"
+path = "../../Configs/Localize.txt"
 langs = {"CN","EN","RU"}
 defaultLang = "CN"
 
@@ -81,7 +81,7 @@ def changeDesc(tid,lang,value):
 			if(not data.has_key(lang)):
 				print "No language: "+lang+" in tid: "+tid
 				sys.exit(2)
-			data[lang] = value
+			data[lang] = value.decode("utf-8")
 			print tid+"\n"+json.dumps(jsonData[tid],ensure_ascii = False,indent = 4)
 
 			with codecs.open(path,'w','utf-8') as w:
