@@ -1,12 +1,14 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Example/AssetLoader/main.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/UExtend/SoundManager/SoundManager.cs">
     <Files>
+      <File FileName="Assets/Example/Localize/testLocalize.cs" Line="1" Column="1" />
       <File FileName="Assets/UExtend/AssertLoader/Asset.cs" Line="105" Column="5" />
-      <File FileName="Assets/Example/AssetLoader/main.cs" Line="39" Column="2" />
-      <File FileName="Assets/Example/AssetLoader/testSp.cs" Line="1" Column="1" />
-      <File FileName="Assets/UExtend/AssertLoader/AssertLoader.cs" Line="474" Column="54" />
-      <File FileName="Assets/UExtend/AssertLoader/AssertFamily.cs" Line="1" Column="1" />
+      <File FileName="Assets/Example/AssetLoader/main.cs" Line="40" Column="3" />
+      <File FileName="Assets/UExtend/SoundManager/SoundManager.cs" Line="16" Column="1" />
+      <File FileName="Assets/UExtend/Curve/CurveTween.cs" Line="1" Column="1" />
+      <File FileName="Assets/Example/MVC Model/TestView.cs" Line="24" Column="43" />
+      <File FileName="Assets/UExtend/MVC/Contants.cs" Line="25" Column="45" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

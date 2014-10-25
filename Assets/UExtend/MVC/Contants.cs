@@ -24,5 +24,6 @@ public class ClassName
 {
 	public const string GAME_MODEL = "GameModel";
 	public const string GAME_CONTROLLER = "TestController";
+	public const string SOUND_MANAGER = "SoundManager";
 	//	public const string GAME_DEBUG_DATA = "ConfigForDebug";
 }

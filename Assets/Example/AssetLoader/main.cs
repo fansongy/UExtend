@@ -35,8 +35,8 @@ public class main : MonoBehaviour {
 
 	void onSound(string name, Object go, object callbackData)
 	{
-		AudioSource music = go as AudioSource;
-		music.Play ();
+		AudioClip music = go as AudioClip;
+		audio.PlayOneShot (music);
 	}
 	
 }
