@@ -18,6 +18,7 @@ public class main : MonoBehaviour {
 		if(GUI.Button(new Rect (350,500,200,80),"Load Sound"))
 		{
 			AssetLoader.Get().LoadSound("bumb",this.onSound);
+			SoundManager sm = Singleton.getInstance(ClassName.SOUND_MANAGER) as SoundManager;
 		}
 
 	}

@@ -12,7 +12,7 @@ Sound auto make to config
 """
 
 fileDir = "."
-fileExport = "./sound.txt"
+fileExport = "../Configs/soundlist.txt"
 extends = ["*.AIFF","*.WAV","*.MP3","*.OGG",
 		   "*.aiff","*.wav","*.mp3","*.ogg"]
 

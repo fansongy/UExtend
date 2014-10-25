@@ -18,7 +18,9 @@ public class ObjectConfig {
 	public virtual void initialize(string jsonString)
 	{
 		configTable = MiniJSON.Json.Deserialize(jsonString) as Dictionary<string,object>;
+
 	}
+
 
 	public object getConfig(string key,int level = 0)
 	{
@@ -54,6 +56,16 @@ public class ObjectConfig {
 				return configTable[key];
 			}
 		}
+	}
+
+	public List<string> getAllKeys()
+	{
+		List<string> result = new List<string>();
+		foreach( var data in configTable)
+		{
+			result.Add(data.Key);
+		}
+		return result;
 	}
 		
 }

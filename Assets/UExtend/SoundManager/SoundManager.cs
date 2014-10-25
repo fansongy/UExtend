@@ -9,7 +9,7 @@ public class SoundManager : MonoBehaviour {
 
 	void Awake()
 	{
-
+		loadAllSound();
 	}
 
 	public void addSoundClip(string key,AudioClip clip)
@@ -37,4 +37,22 @@ public class SoundManager : MonoBehaviour {
 		}
 	}
 
+	public void loadAllSound()
+	{
+		AssetLoader.Get().LoadConfig("soundlist",(string name, Object go, object callbackData)=>{
+			string data = go.ToString();
+			ObjectConfig cfg = new ObjectConfig();
+			cfg.initialize(data);
+			List<string>list = cfg.getAllKeys();
+			foreach(string sound in list)
+			{
+				AssetLoader.Get().LoadSound(sound,this.onSound);
+			}
+		});
+	}
+
+    void onSound(string name, Object go, object callbackData)
+    {
+		soundData.Add(name,(AudioClip)go);
+	}
 }
