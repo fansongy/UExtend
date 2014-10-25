@@ -19,7 +19,7 @@
 	<DebugType>full</DebugType>
 	<Optimize>false</Optimize>
 	<OutputPath>Temp\bin\Debug\</OutputPath>
-	<DefineConstants>DEBUG;TRACE;UNITY_4_5_1;UNITY_4_5;UNITY_WEBPLAYER;WEBPLUG;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_WP8SUPPORT;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_OSX;UNITY_TEAM_LICENSE;UNITY_PRO_LICENSE</DefineConstants>
+	<DefineConstants>DEBUG;TRACE;UNITY_4_5_1;UNITY_4_5;UNITY_STANDALONE_OSX;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_WP8SUPPORT;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_GAMECENTER;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_OSX;UNITY_TEAM_LICENSE;UNITY_PRO_LICENSE</DefineConstants>
 	<ErrorReport>prompt</ErrorReport>
 	<WarningLevel>4</WarningLevel>
 	<NoWarn>0169</NoWarn>
@@ -46,8 +46,6 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Example\AssetLoader\main.cs" />
-     <Compile Include="Assets\Example\AssetLoader\testSp.cs" />
      <Compile Include="Assets\Example\CallSelf\JustCall.cs" />
      <Compile Include="Assets\Example\ConfigReader\TestConfig.cs" />
      <Compile Include="Assets\Example\Localize\testLocalize.cs" />
@@ -57,6 +55,8 @@
      <Compile Include="Assets\Example\MVC Model\StructureGame.cs" />
      <Compile Include="Assets\Example\MVC Model\TestController.cs" />
      <Compile Include="Assets\Example\MVC Model\TestView.cs" />
+     <Compile Include="Assets\Script\main.cs" />
+     <Compile Include="Assets\Script\testSp.cs" />
      <Compile Include="Assets\UExtend\AssertLoader\AssertFamily.cs" />
      <Compile Include="Assets\UExtend\AssertLoader\AssertLoader.cs" />
      <Compile Include="Assets\UExtend\AssertLoader\Asset.cs" />
@@ -87,12 +87,12 @@
      <Compile Include="Assets\UExtend\SoundManager\SoundManager.cs" />
      <Compile Include="Assets\UExtend\Utilities\EnumUtils.cs" />
      <Compile Include="Assets\UExtend\Utilities\GeneralUtils.cs" />
-     <None Include="Assets\Resources\Configs\log.txt" />
-     <None Include="Assets\Configs\log.txt" />
+     <None Include="Assets\Resources\Configs\localize.txt" />
+     <None Include="Assets\Resources\Configs\testConfig.txt" />
      <None Include="Assets\Configs\testConfig.txt" />
      <None Include="Assets\Configs\localize.txt" />
-     <None Include="Assets\Resources\Configs\testConfig.txt" />
-     <None Include="Assets\Resources\Configs\localize.txt" />
+     <None Include="Assets\Resources\Configs\log.txt" />
+     <None Include="Assets\Configs\log.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
