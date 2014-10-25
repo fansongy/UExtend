@@ -67,6 +67,12 @@ In order to add TID easily, I wrote a python script to manage TID. It's named TI
 
 	python TIDMake.py -a TID_NEW -d "I'm descirbe"
 
+## 5.SoundManager ##
+SoundManager is a Singleton. The AudioSource is attached to camera.It support mutiply play sound which is managed by a AudioSource pool.You can use like this:
+1. Make the sounds copyed to the project , and change the path of sound in Asset.cs 
+2. Run the python script 'SoundMake.py' which is in the same dirctory. It will export a sound config file which are all files supported in sound dir to config dir.3. call follow code to play sound:
+ 		SoundManager sm = Singleton.getInstance(ClassName.SOUND_MANAGER) as SoundManager; 		sm.playSound("bumb");
+
 ## Useful Component #####1.CallSelfMethod ###
 It can call the public function of other componet in same gameObject.It can detect the function in editor,and set the delay time of calling after start().### 2.CurveRotation ###It is an rotating animation component which is controled by curve.
 
