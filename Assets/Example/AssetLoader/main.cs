@@ -4,6 +4,11 @@ using System.Collections;
 using System.IO;
 
 public class main : MonoBehaviour {
+
+	void Awake()
+	{
+		Singleton.getInstance(ClassName.SOUND_MANAGER);
+	}
 		
 	void OnGUI()
 	{
@@ -17,8 +22,9 @@ public class main : MonoBehaviour {
 		}
 		if(GUI.Button(new Rect (350,500,200,80),"Load Sound"))
 		{
-			AssetLoader.Get().LoadSound("bumb",this.onSound);
+//			AssetLoader.Get().LoadSound("bumb",this.onSound);
 			SoundManager sm = Singleton.getInstance(ClassName.SOUND_MANAGER) as SoundManager;
+			sm.playSound("bumb");
 		}
 
 	}
@@ -34,10 +40,4 @@ public class main : MonoBehaviour {
 		Log.fansy.ScreenPrint (obj.ToString());
 	}
 
-	void onSound(string name, Object go, object callbackData)
-	{
-		AudioClip music = go as AudioClip;
-		audio.PlayOneShot (music);
-	}
-	
 }
