@@ -11,20 +11,27 @@ import codecs
 Sound auto make to config
 """
 
-fileDir = "."
-fileExport = "../Configs/soundlist.txt"
+fileDir = "../../Sounds/"
+fileExport = "../../Configs/soundlist.txt"
 extends = ["*.AIFF","*.WAV","*.MP3","*.OGG",
 		   "*.aiff","*.wav","*.mp3","*.ogg"]
 
 def main(argv):
 
+	#save current path for use glob
+	curDir = os.getcwd()
+	os.chdir(fileDir)
+
 	files = []
 	#find all file in sound dircotry
 	for ext in extends:
 		fileList = glob.glob(ext)
+
 		if len(fileList) >0:
 			files += fileList
 	print files
+
+	os.chdir(curDir)
 
 	#make Dict
 	fileDict = {}

@@ -1,10 +1,27 @@
-﻿using UnityEngine;
+﻿/*
+ * SoundManager is design to play sound in 2D Game
+ * 
+ * It is a Singleton and the AudioSource is attached to camera
+ * 
+ * It support mutiply play sound which is managed by a AudioSource pool
+ * 
+ * Usage:
+ * 	1.Make the sounds copyed to the project , and change the path of sound in Asset.cs
+ *  2.Run the python script 'SoundMake.py' which is in the same dirctory. 
+ * 		It will export a sound config file which are all files supported in sound dir to config dir
+ *  3.call follow code to play sound:
+ * 		SoundManager sm = Singleton.getInstance(ClassName.SOUND_MANAGER) as SoundManager;
+ *		sm.playSound("bumb");
+ * 
+ */
+
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
 public class SoundManager : MonoBehaviour {
 
-	const int MAX_SOUNDS = 3;
+	const int MAX_SOUNDS = 5;
 
 	Dictionary<string,AudioClip> soundData = new Dictionary<string, AudioClip>();
 	List<AudioSource> player = new List<AudioSource>();
@@ -12,7 +29,6 @@ public class SoundManager : MonoBehaviour {
 	void Awake()
 	{
 		loadAllSound();
-
 
 		if(Camera.main.audio == null)
 		{

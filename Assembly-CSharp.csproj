@@ -57,6 +57,7 @@
      <Compile Include="Assets\Example\MVC Model\StructureGame.cs" />
      <Compile Include="Assets\Example\MVC Model\TestController.cs" />
      <Compile Include="Assets\Example\MVC Model\TestView.cs" />
+     <Compile Include="Assets\Example\SoundManager\SoundMain.cs" />
      <Compile Include="Assets\UExtend\AssertLoader\AssertFamily.cs" />
      <Compile Include="Assets\UExtend\AssertLoader\AssertLoader.cs" />
      <Compile Include="Assets\UExtend\AssertLoader\Asset.cs" />
