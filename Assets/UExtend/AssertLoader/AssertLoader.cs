@@ -471,7 +471,7 @@ public class AssetLoader : MonoBehaviour
 	}
 	public bool LoadSound(string soundName, AssetLoader.ObjectCallback callback, AssetLoader.ProgressCallback progressCallback, object callbackData, bool persistent)
 	{
-		return this.LoadObject(soundName, AssetFamily.Config, callback, progressCallback, callbackData, persistent, false);
+		return this.LoadObject(soundName, AssetFamily.Sound, callback, progressCallback, callbackData, persistent, false);
 	}
 	//------------------------------------------------
 	public bool LoadTexture(string textureName)

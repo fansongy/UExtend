@@ -15,6 +15,11 @@ public class main : MonoBehaviour {
 		{
 			AssetLoader.Get().LoadConfig("log",this.onConfig);
 		}
+		if(GUI.Button(new Rect (350,500,200,80),"Load Sound"))
+		{
+			AssetLoader.Get().LoadSound("bumb",this.onSound);
+		}
+
 	}
 	void onLoaded(string name, Object go, object callbackData)
 	{
@@ -26,5 +31,12 @@ public class main : MonoBehaviour {
 	{
 		Log.fansy.ScreenPrint ("config call back!");
 		Log.fansy.ScreenPrint (obj.ToString());
-	}			
+	}
+
+	void onSound(string name, Object go, object callbackData)
+	{
+		AudioSource music = go as AudioSource;
+		music.Play ();
+	}
+	
 }
