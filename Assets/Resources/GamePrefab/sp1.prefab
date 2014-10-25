@@ -11,7 +11,7 @@ GameObject:
   - 33: {fileID: 3300000}
   - 65: {fileID: 6500000}
   - 23: {fileID: 2300000}
-  - 114: {fileID: 11400002}
+  - 114: {fileID: 11400000}
   m_Layer: 0
   m_Name: sp1
   m_TagString: Untagged
@@ -43,7 +43,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: ffe0ca3d4468f4ad4b103af47f1b8124, type: 2}
+  - {fileID: 2100000, guid: f8578c02ee17c4eb896735e4292901e3, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -70,7 +70,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &11400002
+--- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -78,16 +78,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91383e4d60ad64eb59f7e386115c5547, type: 3}
+  m_Script: {fileID: 11500000, guid: dc007fa902dd54033a11c2dbdc3f0249, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  testName: sp1
+  testName: 737031
   rect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 0
-    height: 0
+    x: 100
+    y: 100
+    width: 100
+    height: 50
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
