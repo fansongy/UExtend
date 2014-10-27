@@ -28,16 +28,14 @@ public class SoundManager : MonoBehaviour {
 
 	Dictionary<string,AudioClip> soundData = new Dictionary<string, AudioClip>();
 	List<AudioSource> player = new List<AudioSource>();
+	AudioSource bgmPlayer = null;
+
 
 	void Awake()
 	{
 		loadAllSound();
 
-		if(Camera.main.audio == null)
-		{
-			Camera.main.gameObject.AddComponent<AudioSource>();
-		}
-		player.Add(Camera.main.audio);
+		bgmPlayer = Camera.main.gameObject.AddComponent<AudioSource>();
 	}
 
 	AudioSource getFreeSource()
@@ -99,6 +97,27 @@ public class SoundManager : MonoBehaviour {
 			source.Play();
 			return source.clip;
 		}
+	}
+
+	public AudioClip playBGM(string key)
+	{
+		if(bgmPlayer.isPlaying)
+		{
+			bgmPlayer.Stop();
+		}
+		if(!soundData.ContainsKey(key))
+		{
+			Debug.LogError("SoundManager::playBGM() - find Error key : "+key+" sound");
+			return null;
+		}
+		else
+		{
+			bgmPlayer.loop = true;
+			bgmPlayer.clip = soundData[key];
+			bgmPlayer.Play();
+			return bgmPlayer.clip;
+		}
+
 	}
 
 	AudioClip playRamdomSound(string key)
