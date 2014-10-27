@@ -86,22 +86,22 @@ public class SoundManager : MonoBehaviour {
 		}
 	}
 
-	public void playSound(string key)
+	public AudioClip playSound(string key)
 	{
-
 		if(!soundData.ContainsKey(key))
 		{
-			playRamdomSound(key);
+			return playRamdomSound(key);
 		}
 		else
 		{
 			var source = getFreeSource();
 			source.clip = soundData[key];
 			source.Play();
+			return source.clip;
 		}
 	}
 
-	void playRamdomSound(string key)
+	AudioClip playRamdomSound(string key)
 	{
 		List<AudioClip> list = new List<AudioClip>();
 		foreach(var each in soundData)
@@ -118,11 +118,12 @@ public class SoundManager : MonoBehaviour {
 			var source = getFreeSource();
 			source.clip = list[rand];
 			source.Play();
+			return source.clip;
 		}
 		else
 		{
 			Debug.LogError("SoundManager::playRamdomSound() - can't find the sound of key: "+key);
-			return;
+			return null;
 		}
 	}
 	public void loadAllSound()
