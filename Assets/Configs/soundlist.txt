@@ -1,4 +1,6 @@
 {
+    "act_hurry_up_1": "act_hurry_up_1.ogg", 
+    "act_hurry_up_2": "act_hurry_up_2.ogg", 
     "bumb": "bumb.mp3", 
     "赢了": "赢了.ogg"
 }

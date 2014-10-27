@@ -12,6 +12,9 @@
  *  3.call follow code to play sound:
  * 		SoundManager sm = Singleton.getInstance(ClassName.SOUND_MANAGER) as SoundManager;
  *		sm.playSound("bumb");
+ *  4.It also support random play,you can name 'AAA_1','AAA_2' as the file name then call as the follow code,the output is random.
+ * 		SoundManager sm = Singleton.getInstance(ClassName.SOUND_MANAGER) as SoundManager;
+ *		sm.playSound("AAA");	
  * 
  */
 
@@ -88,8 +91,7 @@ public class SoundManager : MonoBehaviour {
 
 		if(!soundData.ContainsKey(key))
 		{
-			Debug.LogError("SoundManager::playSound() - can't find the sound of key: "+key);
-			return;
+			playRamdomSound(key);
 		}
 		else
 		{
@@ -99,6 +101,30 @@ public class SoundManager : MonoBehaviour {
 		}
 	}
 
+	void playRamdomSound(string key)
+	{
+		List<AudioClip> list = new List<AudioClip>();
+		foreach(var each in soundData)
+		{
+			if(each.Key.Contains(key))
+			{
+				list.Add(each.Value);
+			}
+		}
+		
+		if(list.Count >0)
+		{
+			int rand = Random.Range(0,list.Count);
+			var source = getFreeSource();
+			source.clip = list[rand];
+			source.Play();
+		}
+		else
+		{
+			Debug.LogError("SoundManager::playRamdomSound() - can't find the sound of key: "+key);
+			return;
+		}
+	}
 	public void loadAllSound()
 	{
 		AssetLoader.Get().LoadConfig("soundlist",(string name, Object go, object callbackData)=>{

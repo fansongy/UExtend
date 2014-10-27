@@ -17,11 +17,15 @@ public class SoundMain : MonoBehaviour {
 	
 	void OnGUI()
 	{
-		if(GUI.Button(new Rect (350,100,200,80),"Load Sound"))
+		if(GUI.Button(new Rect (350,100,200,80),"Play Sound"))
 		{
 			SoundManager sm = Singleton.getInstance(ClassName.SOUND_MANAGER) as SoundManager;
 			sm.playSound("bumb");
 		}
-		
+		if(GUI.Button(new Rect (350,200,200,80),"Play Random Sound"))
+		{
+			SoundManager sm = Singleton.getInstance(ClassName.SOUND_MANAGER) as SoundManager;
+			sm.playSound("act_hurry_up");
+		}	
 	}
 }
