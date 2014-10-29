@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 
 public class ProgressIndicator {
-	float curPercent = 0;
-	float totalPercent = 0;
+	int curPercent = 0;
+	int totalPercent = 0;
 	System.Action<float> progressCallBack;
 
-	public void startProgress(float total,System.Action<float> callBack)
+	public void startProgress(int total,System.Action<float> callBack)
 	{
+		Debug.Log("start total is "+total);
 		curPercent = 0;
 		totalPercent  = total;
 	}
@@ -17,7 +18,7 @@ public class ProgressIndicator {
 		if(curPercent < totalPercent)
 		{
 			curPercent++;
-			float percent = curPercent/totalPercent;
+			float percent = (float)curPercent/totalPercent;
 			if(progressCallBack != null)
 			{
 				progressCallBack(percent);

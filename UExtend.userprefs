@@ -1,12 +1,12 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/UExtend/SceneSwitcher/Loading.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Example/SceneSwitcher/LoadLobbyScene.cs">
     <Files>
-      <File FileName="Assets/UExtend/SceneSwitcher/SceneSwitcher.cs" Line="66" Column="26" />
-      <File FileName="Assets/UExtend/SceneSwitcher/Loading.cs" Line="37" Column="16" />
-      <File FileName="Assets/UExtend/SceneSwitcher/ProgressIndicator.cs" Line="9" Column="2" />
-      <File FileName="Assets/Example/SceneSwitcher/LoadLoginScene.cs" Line="17" Column="37" />
-      <File FileName="Assets/Example/SceneSwitcher/LoadLobbyScene.cs" Line="13" Column="1" />
+      <File FileName="Assets/UExtend/SceneSwitcher/SceneSwitcher.cs" Line="38" Column="17" />
+      <File FileName="Assets/UExtend/SceneSwitcher/Loading.cs" Line="6" Column="23" />
+      <File FileName="Assets/Example/SceneSwitcher/LoadLobbyScene.cs" Line="22" Column="20" />
+      <File FileName="Assets/UExtend/SceneSwitcher/ProgressIndicator.cs" Line="12" Column="18" />
+      <File FileName="Assets/UExtend/AssertLoader/AssertLoader.cs" Line="42" Column="96" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
