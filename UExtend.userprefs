@@ -1,17 +1,18 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="../ddzClient/Assets/Scripts/SoundManager/ObjectConfig.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/UExtend/SceneSwitcher/Loading.cs">
     <Files>
-      <File FileName="../ddzClient/Assets/Scripts/SoundManager/ObjectConfig.cs" Line="19" Column="2" />
-      <File FileName="../ddzClient/Assets/Scripts/Utils/MiniJSON.cs" Line="1" Column="1" />
-      <File FileName="../ddzClient/Assets/Scripts/SoundManager/SoundManager.cs" Line="1" Column="1" />
-      <File FileName="Assets/UExtend/SoundManager/SoundManager.cs" Line="154" Column="42" />
-      <File FileName="Assets/Example/ConfigReader/TestConfig.cs" Line="15" Column="3" />
-      <File FileName="Assets/UExtend/Localize/Localize.cs" Line="57" Column="3" />
+      <File FileName="Assets/UExtend/SceneSwitcher/SceneSwitcher.cs" Line="66" Column="26" />
+      <File FileName="Assets/UExtend/SceneSwitcher/Loading.cs" Line="37" Column="16" />
+      <File FileName="Assets/UExtend/SceneSwitcher/ProgressIndicator.cs" Line="9" Column="2" />
+      <File FileName="Assets/Example/SceneSwitcher/LoadLoginScene.cs" Line="17" Column="37" />
+      <File FileName="Assets/Example/SceneSwitcher/LoadLobbyScene.cs" Line="13" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/song/Documents/work/UExtend/Assets/UExtend/SceneSwitcher/SceneSwitcher.cs" line="66" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

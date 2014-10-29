@@ -51,8 +51,10 @@
      <None Include="Assets\Resources\Configs\localize.txt" />
      <None Include="Assets\Resources\Configs\testConfig.txt" />
      <None Include="Assets\Configs\testConfig.txt" />
+     <None Include="Assets\Configs\sceneConfig.txt" />
      <None Include="Assets\Resources\Configs\soundlist.txt" />
      <None Include="Assets\Configs\localize.txt" />
+     <None Include="Assets\Resources\Configs\sceneConfig.txt" />
      <None Include="Assets\Resources\Configs\log.txt" />
      <None Include="Assets\Configs\log.txt" />
      <None Include="Assets\Configs\soundlist.txt" />

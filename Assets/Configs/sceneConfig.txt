@@ -1,0 +1,11 @@
+{
+	"LobbyScene":{
+		"PreLoadObject":
+		[
+			"aObj",
+			"bObj",
+			"cObj"
+		]
+
+	}
+}
