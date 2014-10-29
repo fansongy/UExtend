@@ -12,9 +12,7 @@ public class TestConfig : MonoBehaviour {
 
 	void onLoaded(string name, UnityEngine.Object obj, object callbackData)
 	{
-		string json = obj.ToString();
-		ObjectConfig config = new ObjectConfig();
-		config.initialize(json);
+		ConfigDict config = ConfigHelper.ParseJsonByString(obj.ToString());
 		object 	t1 = config.getConfig("testBool");
 		string 	t2 =(string)config.getConfig("testString");
 		long 	t3 = (long)config.getConfig("testLong");

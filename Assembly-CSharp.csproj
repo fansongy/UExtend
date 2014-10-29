@@ -66,9 +66,10 @@
      <Compile Include="Assets\UExtend\CallSeflMethod\MethodFinder.cs" />
      <Compile Include="Assets\UExtend\Curve\CurveRotation.cs" />
      <Compile Include="Assets\UExtend\Curve\CurveTween.cs" />
+     <Compile Include="Assets\UExtend\FileReader\ConfigDict.cs" />
+     <Compile Include="Assets\UExtend\FileReader\ConfigHelper.cs" />
      <Compile Include="Assets\UExtend\FileReader\FileUtils.cs" />
      <Compile Include="Assets\UExtend\FileReader\MiniJSON.cs" />
-     <Compile Include="Assets\UExtend\FileReader\ObjectConfig.cs" />
      <Compile Include="Assets\UExtend\Localize\Localize.cs" />
      <Compile Include="Assets\UExtend\LogPrint\Log.cs" />
      <Compile Include="Assets\UExtend\LogPrint\LogInfo.cs" />

@@ -19,7 +19,7 @@ using System.Collections.Generic;
 public class Localize : MonoBehaviour {
 
 	string curLang = "CN";
-	ObjectConfig languageText = null;
+	ConfigDict languageText = null;
 
 	private static Localize s_instance;
 
@@ -54,8 +54,7 @@ public class Localize : MonoBehaviour {
 
 	void onLoadText(string name, Object obj, object callbackData)
 	{
-		languageText = new ObjectConfig();
-		languageText.initialize(obj.ToString());
+		languageText = ConfigHelper.ParseJsonByString(obj.ToString());
 	}
 
 	public string getStringByTID(string tid)

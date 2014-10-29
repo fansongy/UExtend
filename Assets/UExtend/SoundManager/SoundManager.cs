@@ -148,13 +148,10 @@ public class SoundManager : MonoBehaviour {
 	public void loadAllSound()
 	{
 		AssetLoader.Get().LoadConfig("soundlist",(string name, Object go, object callbackData)=>{
-			string data = go.ToString();
-			ObjectConfig cfg = new ObjectConfig();
-			cfg.initialize(data);
-			List<string>list = cfg.getAllKeys();
-			foreach(string sound in list)
+			ConfigDict list = ConfigHelper.ParseJsonByString(go.ToString());
+			foreach(var sound in list)
 			{
-				AssetLoader.Get().LoadSound(sound,this.onSound);
+				AssetLoader.Get().LoadSound(sound.Key,this.onSound);
 			}
 		});
 	}
