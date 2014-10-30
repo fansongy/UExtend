@@ -26,20 +26,16 @@ public class Loading : MonoBehaviour {
 
 	protected virtual IEnumerator preAction()
 	{
-		Debug.Log("Begin Loading");
-//		yield return new WaitForSeconds(0.1f);
 		yield return null;
 	}
 
 
 	protected virtual IEnumerator loadAction()
 	{
-		Debug.Log("Loading...");
 		yield return null;
 	}
 	protected virtual IEnumerator endAction()
 	{
-		Debug.Log("End Load");
 		yield return null;
 	}
 
