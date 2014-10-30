@@ -14,14 +14,12 @@ public class Loading : MonoBehaviour {
 	IEnumerator loadScene()
 	{
 		yield return StartCoroutine(preAction());
-		//异步读取场景。
-		//Globe.loadName 就是A场景中需要读取的C场景名称。
+
 		string sceneName = (string)SceneSwitcher.getInstance().getDict()[SceneSwitcher.NEXTSCENE];
 		async = Application.LoadLevelAsync(sceneName);
 
 		yield return StartCoroutine(endAction());
 
-		//读取完毕后返回， 系统会自动进入C场景
 		yield return async;
 		
 	}
@@ -45,8 +43,4 @@ public class Loading : MonoBehaviour {
 		yield return null;
 	}
 
-	void OnGUI()
-	{
-		GUI.Label(new Rect(100,200,200,200),"Loading...");
-	}
 }

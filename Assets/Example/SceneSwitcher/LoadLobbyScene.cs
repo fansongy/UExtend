@@ -12,13 +12,9 @@ public class LoadLobbyScene : MonoBehaviour {
 	{
 		ProgressIndicator indicator = SceneSwitcher.getInstance().getIndicator();
 		var obj = Resources.Load("GamePrefab/sp1");
-		for(int i = 0;i<5000;++i)
+		for(int i = 0;i<1000;++i)
 		{
 			Instantiate(obj);
-			if(i%10 == 0)
-			{
-				indicator.moveNext();
-			}
 		}
 		yield return null;
 	}

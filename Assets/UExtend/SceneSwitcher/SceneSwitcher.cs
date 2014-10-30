@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
 
 public class SceneSwitcher : MonoBehaviour {
@@ -46,36 +47,40 @@ public class SceneSwitcher : MonoBehaviour {
 
 	public void toSceneStatic(string target)
 	{
-		toLoadingScene(target);
-	}
-
-//	public void toScene(string target)
-//	{
-//		loadScene(target);
-//		initIndicator(null);
-//	}
-//
-//	public void toScene(string target,System.Action<float> changeProcess)
-//	{
-//		loadScene(target);
-//		initIndicator(changeProcess);
-//	}
-
-	void toLoadingScene(string target)
-	{
 		strDict[NEXTSCENE] = target;
 		currentSceneName = target;
 		Application.LoadLevel(LOADINGSCENE);
 	}
 
-	void initIndicator(System.Action<float> changeProcess)
+	public void toSceneProgress(string target,System.Action<float> changeProccess,System.Action loadFinish)
+	{
+		strDict[NEXTSCENE] = target;
+		currentSceneName = target;
+		initIndicator(changeProccess,loadFinish);
+	}
+
+	void initIndicator(System.Action<float> changeProcess,System.Action finish)
 	{
 		AssetLoader.Get().LoadConfig("sceneConfig",(string name, UnityEngine.Object obj, object callbackData)=>{
 			ConfigDict cfg = ConfigHelper.ParseJsonByString(obj.ToString());
 			Dictionary<string,object> dict = cfg[currentSceneName] as Dictionary<string,object>;
 			List<object> list = dict[PRELOAD] as List<object>;
-			progress.startProgress(list.Count,changeProcess);
+			progress.startProgress(list.Count,changeProcess,finish);
+			StartCoroutine(testLoadRes());
 		}); 	
+	}
+
+	IEnumerator testLoadRes()
+	{
+		yield return new WaitForSeconds(1);
+		Debug.Log("Load 1");
+		progress.moveNext();
+		yield return new WaitForSeconds(1);
+		Debug.Log("Load 2");
+		progress.moveNext();
+		yield return new WaitForSeconds(1);
+		Debug.Log("Load 3");
+		progress.moveNext();
 	}
 
 
