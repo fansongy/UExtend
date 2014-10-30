@@ -11,10 +11,13 @@ public class LoadLoginScene : MonoBehaviour {
 
 	void OnGUI()
 	{
-		if(GUI.Button(new Rect(200,200,100,80),"Login"))
+		if(GUI.Button(new Rect(200,100,200,80),"SceneDirectly"))
 		{
-			Debug.Log("switch scene");
-			SceneSwitcher.getInstance().toScene("LobbyScene");
+			SceneSwitcher.getInstance().toSceneDirectly("LobbyScene");
+		}
+		if(GUI.Button(new Rect(200,200,200,80),"SceneStatic"))
+		{
+			SceneSwitcher.getInstance().toSceneStatic("LobbyScene");
 		}
 
 	}

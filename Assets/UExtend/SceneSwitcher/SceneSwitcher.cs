@@ -37,20 +37,31 @@ public class SceneSwitcher : MonoBehaviour {
 	{
 		return strDict;
 	}
-
-	public void toScene(string target)
+	public void toSceneDirectly(string target)
 	{
-		loadScene(target);
-		initIndicator(null);
+		strDict[NEXTSCENE] = target;
+		currentSceneName = target;
+		Application.LoadLevel(target);
 	}
 
-	public void toScene(string target,System.Action<float> changeProcess)
+	public void toSceneStatic(string target)
 	{
-		loadScene(target);
-		initIndicator(changeProcess);
+		toLoadingScene(target);
 	}
 
-	void loadScene(string target)
+//	public void toScene(string target)
+//	{
+//		loadScene(target);
+//		initIndicator(null);
+//	}
+//
+//	public void toScene(string target,System.Action<float> changeProcess)
+//	{
+//		loadScene(target);
+//		initIndicator(changeProcess);
+//	}
+
+	void toLoadingScene(string target)
 	{
 		strDict[NEXTSCENE] = target;
 		currentSceneName = target;
@@ -66,5 +77,6 @@ public class SceneSwitcher : MonoBehaviour {
 			progress.startProgress(list.Count,changeProcess);
 		}); 	
 	}
+
 
 }
