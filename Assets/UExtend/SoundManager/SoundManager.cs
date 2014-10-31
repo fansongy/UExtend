@@ -160,4 +160,14 @@ public class SoundManager : MonoBehaviour {
     {
 		soundData.Add(name,(AudioClip)go);
 	}
+
+	public void cleanPlayer()
+	{
+		for(int i = 0 ;i<player.Count;++i)
+		{
+			player[i].Stop();
+		}
+		player.Clear();
+	}
+
 }
