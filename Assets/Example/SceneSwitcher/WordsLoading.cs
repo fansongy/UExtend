@@ -1,4 +1,9 @@
-﻿using UnityEngine;
+﻿/*
+ * This file show the children class of loading, which should attach our loading scene.
+ * 
+ */ 
+
+using UnityEngine;
 using System.Collections;
 
 public class WordsLoading : Loading {

@@ -1,4 +1,9 @@
-﻿using UnityEngine;
+﻿/*
+ * This is the Switch target Scene 
+ * 
+ */
+
+using UnityEngine;
 using System.Collections;
 
 public class LoadLobbyScene : MonoBehaviour {

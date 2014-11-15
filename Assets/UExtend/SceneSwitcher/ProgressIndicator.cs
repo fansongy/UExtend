@@ -1,4 +1,15 @@
-﻿using UnityEngine;
+﻿/*
+ * This a indicator for progress.
+ * 
+ * You can use startProgress to init this indicator.
+ * 
+ * Then you could call moveNext() to increase indicator, the callBack will be called each time.
+ * 
+ * When the indicator hit the end, finishCallBack will be called.
+ * 
+ */
+
+using UnityEngine;
 using System.Collections.Generic;
 
 public class ProgressIndicator {
@@ -33,6 +44,11 @@ public class ProgressIndicator {
 			{
 				finishCallBack();
 			}
+
+			curPercent = 0;
+			totalPercent = 0;
+			progressCallBack = null;
+			finishCallBack = null;
 		}
 	}
 

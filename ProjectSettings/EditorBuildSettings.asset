@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Example/SceneSwitcher/LoginScene.unity
+    path: Assets/Example/SceneSwitcher/SceneSwitcherTest.unity
   - enabled: 1
     path: Assets/Example/SceneSwitcher/LobbyScene.unity
   - enabled: 1
